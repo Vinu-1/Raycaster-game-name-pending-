@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <GL/glut.h>
 
+//Currently has a window with opengl working after pain staking effort and eventually giving up
+
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
