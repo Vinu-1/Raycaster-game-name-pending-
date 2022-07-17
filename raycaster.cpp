@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <GL/glut.h>
+#include <GL\glut.h>
 
-//Currently has a window with opengl working after pain staking effort and eventually giving up
 
 float px,py; //Player Position
 
@@ -23,6 +22,15 @@ void display()
 	
 }
 
+void buttons(unsigned char key,int x, int y)
+{
+	if(key=='a'){px-=5;}
+	if(key=='d'){px+=5;}
+	if(key=='w'){px-=5;}
+	if(key=='s'){px+=5;}
+	glutPostRedisplay();
+}
+
 void init()
 {
 	glClearColor(0.3, 0.3, 0.3, 0);
@@ -38,5 +46,6 @@ int main(int argc, char* argv[])
 	glutCreateWindow("Test 1"); 
 	init();
 	glutDisplayFunc(display);
+	glutKeyboardFunc(buttons);
 	glutMainLoop(); 
 }
