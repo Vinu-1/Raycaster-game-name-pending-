@@ -26,8 +26,8 @@ void buttons(unsigned char key,int x, int y)
 {
 	if(key=='a'){px-=5;}
 	if(key=='d'){px+=5;}
-	if(key=='w'){px-=5;}
-	if(key=='s'){px+=5;}
+	if(key=='w'){py-=5;}
+	if(key=='s'){py+=5;}
 	glutPostRedisplay();
 }
 
